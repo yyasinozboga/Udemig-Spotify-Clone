@@ -1,0 +1,42 @@
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 0 30px;
+  background: linear-gradient(to right, black, $spotify-color);
+  display: flex;
+  align-items: center;
+
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .song {
+      &-detail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        color: white;
+
+        &-title {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+
+      &-img {
+        width: 70px;
+        height: 70px;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

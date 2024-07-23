@@ -1,0 +1,70 @@
+.container {
+  margin: 120px 10px 0 240px;
+  padding: 20px;
+  background-color: $card-background;
+  min-height: calc((97vh + 10px) - 120px);
+  border-radius: 10px;
+
+  .title {
+    color: $text;
+  }
+
+  .song {
+    &-list {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    &-detail {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    & {
+      position: relative;
+      width: 220px;
+      height: 300px;
+      background-color: $color;
+      padding: 20px;
+      border-radius: 10px;
+      color: $text;
+
+      &:hover .play-btn {
+        bottom: 120px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .play-btn {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 20px;
+        bottom: 50px;
+        background-color: $spotify-color;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        font-size: 22px;
+        color: $text;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      &-img {
+        height: 150px;
+        width: 100%;
+      }
+
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+}

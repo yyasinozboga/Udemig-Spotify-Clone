@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style Css -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Bs Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Title -->
+    <title>Spotify Clone</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Form -->
+      <form class="form">
+        <input type="text" class="form-input" placeholder="Search music" />
+        <button class="form-btn"><i class="bi bi-search"></i></button>
+      </form>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link">Premium</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Destek</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Oturum Aç</a></li>
+          <li class="nav-item active">
+            <a href="#" class="nav-link">Kayıt Ol</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Aside -->
+    <aside class="aside">
+      <figure>
+        <img src="./images/spotify-logo.png" class="text-logo" />
+        <img src="./images/no-text.png" class="no-text-logo" />
+      </figure>
+
+      <!-- Sidebar -->
+      <ul class="sidebar">
+        <li class="sidebar-item">
+          <button>
+            <i class="bi bi-house-fill"></i
+            ><span class="sidebar-title">Anasayfa</span>
+          </button>
+        </li>
+
+        <li class="sidebar-item">
+          <button>
+            <i class="bi bi-search"></i><span class="sidebar-title">Arama</span>
+          </button>
+        </li>
+
+        <li class="sidebar-item">
+          <button>
+            <i class="bi bi-collection"></i
+            ><span class="sidebar-title">Kütüphane</span>
+          </button>
+        </li>
+
+        <li class="sidebar-item">
+          <button>
+            <i class="bi bi-music-note-list"></i
+            ><span class="sidebar-title">Çalma Listeleri</span>
+          </button>
+        </li>
+
+        <li class="sidebar-item">
+          <button>
+            <i class="bi bi-heart"></i
+            ><span class="sidebar-title">Beğenilen Şarkılar</span>
+          </button>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Container -->
+    <main class="container">
+      <h1 class="title">Popüler Müzikler</h1>
+
+      <!-- Song List -->
+      <ul class="song-list"></ul>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container"></footer>
+
+    <!-- JS -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
