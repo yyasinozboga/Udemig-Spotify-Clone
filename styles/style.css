@@ -3,8 +3,8 @@
   position: fixed;
   top: 10px;
   right: 10px;
+  left: 240px;
   background-color: #282828;
-  width: calc(100vw - 250px);
   z-index: 1;
   border-radius: 10px;
   padding: 0 20px;
@@ -12,12 +12,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
+}
+@media (max-width: 800px) {
+  .header {
+    left: 90px;
+  }
+}
+.header.active {
+  border-radius: 10px 10px 0 0;
 }
 .header .form {
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 800px) {
+  .header .form {
+    width: 90%;
+  }
 }
 .header .form-input, .header .form-btn {
   background-color: black;
@@ -41,6 +55,11 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 800px) {
+  .header .nav {
+    display: none;
+  }
 }
 .header .nav-item {
   padding: 10px;
@@ -127,8 +146,18 @@
   min-height: calc(97vh + 10px - 120px);
   border-radius: 10px;
 }
+@media (max-width: 800px) {
+  .container {
+    margin-left: 90px;
+  }
+}
 .container .title {
   color: rgba(255, 255, 255, 0.78);
+}
+@media (max-width: 670px) {
+  .container .title {
+    text-align: center;
+  }
 }
 .container .song-list {
   margin-top: 50px;
@@ -137,6 +166,11 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+@media (max-width: 670px) {
+  .container .song-list {
+    justify-content: center;
+  }
 }
 .container .song-detail {
   margin-top: 10px;
@@ -191,11 +225,21 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 670px) {
+  .footer-container {
+    padding: 0 10px;
+  }
+}
 .footer-container .footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 670px) {
+  .footer-container .footer audio {
+    width: 50%;
+  }
 }
 .footer-container .footer .song-detail {
   display: flex;
@@ -215,6 +259,44 @@
 }
 .footer-container .footer .song-img img {
   border-radius: 50%;
+}
+
+.res-menu-btn {
+  display: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 27px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .res-menu-btn {
+    display: block;
+  }
+}
+.res-menu-list {
+  display: none;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -200px;
+  background-color: #282828;
+  transition: all 0.3s ease;
+}
+@media (max-width: 800px) {
+  .res-menu-list {
+    display: block;
+  }
+}
+.res-menu-list.active {
+  top: 80px;
+}
+.res-menu-item {
+  padding: 10px;
+}
+.res-menu-item:hover {
+  background-color: #18d860;
 }
 
 * {

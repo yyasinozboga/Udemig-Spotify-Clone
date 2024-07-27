@@ -1,0 +1,39 @@
+.res-menu {
+  &-btn {
+    display: none;
+    background-color: transparent;
+    color: $text;
+    font-size: 27px;
+    cursor: pointer;
+    @include ipad {
+      display: block;
+    }
+  }
+
+  &-list {
+    display: none;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -200px;
+    background-color: $card-background;
+    transition: all 0.3s ease;
+    @include ipad {
+      display: block;
+    }
+
+    &.active {
+      top: 80px;
+    }
+  }
+
+  &-item {
+    padding: 10px;
+
+    &:hover {
+      background-color: $spotify-color;
+    }
+  }
+}

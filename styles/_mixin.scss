@@ -20,3 +20,9 @@
     @content;
   }
 }
+
+@mixin dflex($x, $y) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}

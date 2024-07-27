@@ -7,18 +7,23 @@
   background: linear-gradient(to right, black, $spotify-color);
   display: flex;
   align-items: center;
+  @include mobile {
+    padding: 0 10px;
+  }
 
   .footer {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include dflex(space-between, center);
+
+    audio {
+      @include mobile {
+        width: 50%;
+      }
+    }
 
     .song {
       &-detail {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include dflex(center, center);
         gap: 30px;
         color: white;
 

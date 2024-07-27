@@ -4,19 +4,26 @@
   background-color: $card-background;
   min-height: calc((97vh + 10px) - 120px);
   border-radius: 10px;
+  @include ipad {
+    margin-left: 90px;
+  }
 
   .title {
     color: $text;
+    @include mobile {
+      text-align: center;
+    }
   }
 
   .song {
     &-list {
       margin-top: 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include dflex(space-between, center);
       flex-wrap: wrap;
       gap: 20px;
+      @include mobile {
+        justify-content: center;
+      }
     }
 
     &-detail {

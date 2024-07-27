@@ -2,21 +2,28 @@
   position: fixed;
   top: 10px;
   right: 10px;
+  left: 240px;
   background-color: $card-background;
-  width: calc(100vw - 250px);
   z-index: 1;
   border-radius: 10px;
   padding: 0 20px;
   height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include dflex(space-between, center);
+  transition: all 0.3s ease;
+  @include ipad {
+    left: 90px;
+  }
+
+  &.active {
+    border-radius: 10px 10px 0 0;
+  }
 
   .form {
     width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dflex(center, center);
+    @include ipad {
+      width: 90%;
+    }
 
     &-input,
     &-btn {
@@ -41,10 +48,11 @@
   }
 
   .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dflex(center, center);
     gap: 10px;
+    @include ipad {
+      display: none;
+    }
 
     &-item {
       padding: 10px;
