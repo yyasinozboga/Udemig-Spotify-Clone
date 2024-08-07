@@ -1,4 +1,4 @@
-# Spotify Clone
+# Udemig Spotify Clone
 
 Meet the music player that will take your music listening experience to the next level! This music player will add color to your life with both its elegance and performance, offering you not only music but also a real experience.
 
